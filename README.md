@@ -1,5 +1,5 @@
 # BMI Calculator
-A simple BMI (Body Mass Index ) calculator made using python tkinter
+A simple BMI (Body Mass Index ) with error handling calculator made using python tkinter 
 
 # Requirement 
 - Python 3.x
