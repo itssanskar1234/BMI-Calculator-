@@ -1,5 +1,5 @@
 from tkinter import *
-from tkinter import messagebox as tsmg
+from tkinter import messagebox as tmsg
 
 class BMI(Tk):
     def __init__(self):
@@ -110,11 +110,11 @@ class BMI(Tk):
         # If the user enters a negative value, it displays an error message and clears the respective field where the user entered 0 or a negative value.
             if height<=0 or weight<=0:                        
                 if weight<=0:
-                    tsmg.showerror("Error","Please enter a positive number for weight")
+                    tmsg.showerror("Error","Please enter a positive number for weight")
                     self.weight_val.set("")
                 
                 if height<=0:
-                    tsmg.showerror("Error","Please enter a positive number for height")
+                    tmsg.showerror("Error","Please enter a positive number for height")
                     self.height_val.set("")
             else:
                 self.bmi_val.set(f"{value:.4}")
@@ -123,17 +123,17 @@ class BMI(Tk):
         # Handling the case where height is zero (which would cause a ZeroDivisionError)
                 
             # Displaying an error message for zero height
-                tsmg.showerror('Error',"Please enter a positive number for height.")
+                tmsg.showerror('Error',"Please enter a positive number for height.")
                 self.height_val.set("")
                 if weight<=0:
                     self.weight_val.set("")
-                    tsmg.showerror("Error","Please enter a positive number for weight")
+                    tmsg.showerror("Error","Please enter a positive number for weight")
 
         except ValueError:
             # Handling the case where non-numerical values are entered
 
             # Displaying an error message for non-numerical input
-            tsmg.showerror("Error","Please Enter numerical value")
+            tmsg.showerror("Error","Please Enter numerical value")
 
             # Clearing height field if it contains non-numerical input
             if not self.height_val.get().isdigit():
@@ -145,7 +145,7 @@ class BMI(Tk):
 
         except Exception:
             # Handling any other unexpected errors
-            tsmg.showerror("Error","an error has occured")
+            tmsg.showerror("Error","An error has occured")
             # Clearing all fields
             self.clear()
 
